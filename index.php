@@ -1,3 +1,4 @@
+//hello hello
 <?php
 $url = "https://walletmc.ipay.ua";
 $test_phone = "380639429219";
