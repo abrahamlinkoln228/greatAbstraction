@@ -13,8 +13,15 @@ var_dump($_ENV);
 //Twig_autoloader::register();
 
 $loader = new Twig_Loader_Filesystem('templates');
-$twig = new Twig_Environment($loader);
+$twig = new Twig_Environment($loader, array(
+//	'cache' => 'cache'
+));
 
 $template = $twig->loadTemplate('index.html');
 
-echo $template->render(array());
+$title = "Page name";
+
+echo $template->render(array(
+	'title' => $title
+
+));
